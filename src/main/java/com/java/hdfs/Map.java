@@ -19,7 +19,7 @@ public class Map extends Mapper<LongWritable, Text, Text, IntWritable> {
 	protected void map(LongWritable key, Text value, Mapper<LongWritable, Text, Text, IntWritable>.Context context) throws IOException, InterruptedException {
 		String[] values = value.toString().split(",");
 		// 출력 키에 넣을 문자열 변수
-		String strKey = values[0] + "년 " + values[1] + "월";
+		String strKey = values[0] + "year " + values[1] + "month";
 		int intValues = Integer.parseInt(values[0]);
 		
 		if("NA".equals(values[15])) {
